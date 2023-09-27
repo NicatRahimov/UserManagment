@@ -4,21 +4,21 @@ package az.coders.UserManagment.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 @Data
 @Entity
-@Table(name = "user",schema = "userdb")
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
     @NotNull
-    String firstName;
+    @Column(name = "first_name")
+    String username;
     @NotNull
-    String secondName;
-    @NotNull
+    @Column(name = "email")
     String email;
     @NotNull
+    @Column(name = "pass")
     String password;
 }

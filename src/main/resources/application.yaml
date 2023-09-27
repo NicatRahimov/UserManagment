@@ -1,9 +1,10 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/usermanagment
-    username: postgres
+    username: nicat
     password: 1312
   jpa:
     hibernate:
       ddl-auto: update # or create-drop if you want to recreate the schema on every startup
     show-sql: true # if you want to see SQL queries in the console
+
